@@ -1,548 +1,537 @@
 *{
- 
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
 html,body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: lucidaCalligraphy;
-  background-color: hsl(0deg 0% 90%);
-  font-size: 20px;
-  min-height: 300px;
-  min-width: 220px;
-  width: 100%;
-  box-sizing: border-box;
+height: 100%;
+margin: 0;
+padding: 0;
+font-family: "Segoe UI";
+background-color: hsl(0deg 0% 90%);
+font-size: 20px;
+min-height: 300px;
+min-width: 220px;
+width: 100%;
+box-sizing: border-box;
 }
 
 .container{
-        display: grid;
-        background-color: hsl(0deg 0% 90%);
-        width: 100%;
-        height: 100%;
-        grid-template-columns: 1fr 320px;
-        grid-auto-rows: 30px 30vh 40px 1fr;
-        grid-template-areas:
-        "head head "
-        "main-container history"
-        "bottom history "
-        "numbers history";
-       
+display: grid;
+background-color: hsl(0deg 0% 90%);
+width: 100%;
+height: 100%;
+grid-template-columns: 1fr 320px;
+grid-auto-rows: 30px 30vh 40px 1fr;
+grid-template-areas:
+"head head "
+"main-container history"
+"bottom history "
+"numbers history";
 }  
+
 .main-container{
-        grid-area: main-container;
-        background-color: hsl(0deg 0% 90%);
+grid-area: main-container;
+background-color: hsl(0deg 0% 90%);
 }
 
 .head {
-          grid-area: head;
-          display: flex;
-          background-color: hsl(0deg 0% 90%);
-          position: relative;
-          width: 100%;
-        } 
-
-        .calculatore{
-
-            left: 0;
-            padding-left: 10px;
-            padding-top: 5px;
-            font-size: 15px;
-      }
-          .icon{
-
-            right: 0px;
-            position: absolute;
-            background-color: hsl(0deg 0% 90%);
-      }
-          .close{
-          
-           padding: 2px; 
-           right: 0;
-           border: none;
-           background-color:  rgb(216, 230, 230); 
-           position: absolute;
-           height: 30px;
-           width: 40px;
-           justify-content: center;
-           display: flex;
-           align-items: center;
-           background-color: hsl(0deg 0% 90%);
-    
-      }
-
-          .close:hover {
-            background-color: hsl(355deg 86% 49%);
-      }
-        
-        
-          .maxi-mize{
-
-          right: 40px;
-          background-color: rgb(216, 230, 230); 
-          position: absolute;
-          padding: 10px;
-          height: 30px;
-          width: 40px;
-          justify-content:center;
-          display: flex;
-          align-items: center;
-          background-color: hsl(0deg 0% 90%);
-
-      }
-          .maxi-mize:hover{
-
-          background-color: hsl(0deg 0% 81%);
-
-      }
-
-          .mini-mize{
-          
-          right: 80px;
-          background-color: rgb(216, 230, 230); 
-          position: absolute;
-          height: 30px;
-          width: 35px;
-          padding: 2px;
-          justify-content: center;
-          display: flex;
-          align-items: center;
-          background-color: #e4e4e4;
-      }
-          .mini-mize:hover{
-
-            background-color: hsl(0deg 0% 81%);
-      }
-
-          .nav{
-
-            position: relative;
-            height: 40%;
-            grid-area: nav;
-            display: flex;
-            background-color: hsl(0deg 0% 90%);
-            width: 73%;
-            justify-content: center;
-            align-items: center;
-
-      }
-  
-          .nav-inner-icon{
-
-            position: absolute;
-            top: 6px;
-            left: 15px;
-            padding: 5px;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-
-      }
-          .nav-inner-icon:hover{
-
-            background-color: hsl(0deg 0% 81%);
-          
-          }
-            
-        
-          .standard{
-
-          position: absolute;
-          top: 10px;
-          left: 60px;
-          font-size: 20px;
-
-      }
-
-          .keeponyou{
-          
-          position: absolute;
-          top: 12px;
-          left: 150px;
-
-      }
-           
-          .historyicon{
-
-          position: absolute;
-          top: 10%;
-          left: 127%;
-          border: none;
-          display: none;
-          justify-content: center;
-          align-items: center;
-          margin-right: 10px;
-          padding: 5px;
-     
-      }
-
-       
-          .input-main{
-
-          cursor: text;
-          font-weight: 600;
-          color: black;
-          font-size: 80px;
-          
-          margin-right: 10px;
-          padding: 1px;
-          float: right;
-          background-color: hsl(0deg 0% 90%);
-      }
-
-          .bottom{
-
-          grid-area: bottom;
-          font-size: small;
-          display: flex;
-          
-      }
-
-          .bottom div{
-
-          text-align: left;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100px;
-        
-      }
-    
-          .mhover:hover{
-           background-color: hsl(0deg 0% 81%);
-
-      }
-
-         .bottom .mc , .mr{
-
-          color: hsl(0deg 0% 78%);
-      }
-          
-          .bottom .m{
-            display: none;
-
-          font-size: inherit;
-          border: none;
-          background-color: hsl(0deg 0% 90%);
-            color: hsl(0deg 0% 78%);
-
-      }
-
-        
-          .ul {
-
-          display: flex;
-          flex-direction: bottom;
-      }
-
-        
-
-       
-      .numbers{
-        height: 100%;
-        display: grid;
-        grid-area: numbers;
-        grid-template-columns:repeat(4,2fr);
-        grid-template-rows: repeat(6,minmax(40px,1fr));
-        grid-template-areas: 
-              " percent radical power reverse"
-              " CE C delete division "
-              " seven eight nine multiplication"
-              " four five six subtraction"
-              " one two three addition"
-              "plus_minus zero dot equal" ;
-              background-color: #e4e4e4;
-              gap: 3px;
-              overflow: hidden;
-      }
-    
-
-           .percent {
-
-          grid-area: percent;
-          background-color: hsl(0deg 0% 94%);
-      }
-
-           .CE {
-
-           grid-area: CE;
-           background-color: hsl(0deg 0% 94%);
-      }
-
-           .C {
-
-           grid-area: C;
-           background-color: hsl(0deg 0% 94%);
-      }
-
-          .delete {
-
-           grid-area: delete;
-           background-color: hsl(0deg 0% 94%);
-      }
-
-          .division {
-
-           grid-area: division;
-           background-color: hsl(0deg 0% 94%);
-
-      }
-
-          .radical {
-
-           grid-area: radical;
-           background-color: hsl(0deg 0% 94%);
-      }
-
-          .seven {
-
-           grid-area: seven;
-           background-color:  hsl(0deg 0% 98%);
-      }
-          .eight {
-
-           grid-area: eight;
-           background-color:  hsl(0deg 0% 98%);
-      }
-
-          .nine {
-
-           grid-area: nine;
-           background-color:  hsl(0deg 0% 98%);
-      }
-       
-         .multiplication {
-
-           grid-area: multiplication;
-           background-color: hsl(0deg 0% 94%);
-      }
-
-         .power {
-
-           grid-area: power;
-           background-color: hsl(0deg 0% 94%);
-      }
-
-          .four {
-
-          grid-area: four;
-          background-color:  hsl(0deg 0% 98%);
-      }
-          .five {
- 
-           grid-area: five;
-           background-color:  hsl(0deg 0% 98%);
-      }
-          .six {
-
-           grid-area: six;
-           background-color:  hsl(0deg 0% 98%);
-      }
-
-          .subtraction {
-
-            grid-area: subtraction;
-            background-color: hsl(0deg 0% 94%);
-      }
-
-          .one {
-
-            grid-area: one;
-            background-color:  hsl(0deg 0% 98%);
-      }
-
-          .two {
-
-          grid-area: two;
-          background-color:  hsl(0deg 0% 98%);
-      }
-
-          .three {
-
-            grid-area: three;
-            background-color:  hsl(0deg 0% 98%);
-      }
-
-          .addition {
-
-            grid-area: addition;
-            background-color: hsl(0deg 0% 94%);
-      }
-
-          .reverse {
-
-           grid-area: reverse;
-           background-color: hsl(0deg 0% 94%);
-      }
-
-          .plus_minus {
-
-            grid-area: plus_minus;
-            font-size: 25px;
-            background-color: hsl(0deg 0% 94%);
-      }
-
-          .zero {
-
-           grid-area: zero;
-           background-color:  hsl(0deg 0% 98%);
-
-      }
-          .dot {
-
-           font-size: 30px;
-           grid-area: dot;
-           background-color: hsl(0deg 0% 94%);
-      }
-
-          .equal {
-           font-size: 25px;
-            grid-area: equal;
-            background-color: hsl(0deg 0% 94%);
-      } 
-
-          .equal:hover{
-
-            background-color:#299fcc;
-      }
-      .power3 div{
-        display: none;
-      }
-
-          .history {
-          display:inline; 
-          padding: 5px;
-          grid-area: history;
-          margin: 1px;
-          background-color: hsl(0deg 0% 90%);
-      }
-    
-         .history-icon {
-           display: none;
-          font-weight: bold;
-          padding-right: 18px;
-          margin-right: 20px;
-          font-size: 20px;
-          align-items: center;
-          justify-content: center;
-          display: flex;
-          
-      }
-          .icon2 {
-
-            margin: 5px;
-            padding-bottom: 3px;
-            border-bottom: 4px solid hsl(25deg 63% 58%);
-
-      }
-          .icon3 {
-
-            margin: 15px;
-      }
-          .text_history{
-
-            margin: 25px;
-            align-items: center;
-            justify-content: center;
-            display:flex;
-            
-      }
-          .numbers div {
-
-           display: flex;
-           justify-content: center;
-           align-items: center;
-      }
-
-          .numbers div:hover {
- 
-           background-color: hsl(0deg 0% 90%);
-      }
-
-          .numbers .color_white {
-
-            background-color: white;
-            font-weight: 600;
-            font-size: 25px;
-      }
-
-          .numbers .color_gray {
-
-            background-color: #f3f3f3;
-      }
-      
-
-      @media screen and (max-width:550px){
-        .power3 div{
-          display: none;
-        }
-    .container{
-    
-      grid-template-columns: 100%;
-      grid-template-areas: 
-      "head  "
-      "main-container "
-      "bottom  "
-      "numbers";
-    }
-    .history{
-      display: none;
-    }
-    
-   .historyicon{
-     display: block;
-   }
-   .bottom .m{
-     display: block;
-   }
+grid-area: head;
+display: flex;
+background-color: hsl(0deg 0% 90%);
+position: relative;
+width: 100%;
+} 
+
+.calculatore{
+left: 0;
+padding-left: 10px;
+padding-top: 5px;
+font-size: 15px;
 }
+
+.icon{
+right: 0px;
+position: absolute;
+background-color: hsl(0deg 0% 90%);
+}
+
+.close{
+padding: 2px; 
+right: 0;
+border: none;
+background-color:  rgb(216, 230, 230); 
+position: absolute;
+height: 30px;
+width: 40px;
+justify-content: center;
+display: flex;
+align-items: center;
+background-color: hsl(0deg 0% 90%);
+font-size: 15px;
+}
+
+.close:hover {
+background-color: hsl(355deg 86% 49%);
+}
+
+
+.maxi-mize{
+right: 40px;
+background-color: rgb(216, 230, 230); 
+position: absolute;
+padding: 10px;
+height: 30px;
+width: 40px;
+justify-content:center;
+display: flex;
+align-items: center;
+background-color: hsl(0deg 0% 90%);
+font-size: 15px;
+}
+
+.maxi-mize:hover{
+background-color: hsl(0deg 0% 81%);
+}
+
+.mini-mize{
+right: 80px;
+background-color: rgb(216, 230, 230); 
+position: absolute;
+height: 30px;
+width: 40px;
+padding: 4px;
+justify-content: center;
+display: flex;
+align-items: center;
+background-color: #e4e4e4;
+}
+
+.mini-mize:hover{
+background-color: hsl(0deg 0% 81%);
+}
+
+.nav{
+position: relative;
+height: 40%;
+grid-area: nav;
+display: flex;
+background-color: hsl(0deg 0% 90%);
+width: 73%;
+justify-content: center;
+align-items: center;
+}
+    
+.nav-inner-icon{
+position: absolute;
+top: 5px;
+left: 10px;
+padding: 10px;
+justify-content: center;
+align-items: center;
+display: flex;
+}
+
+.nav-inner-icon:hover{
+background-color: hsl(0deg 0% 81%);
+}
+
+.standard{
+position: absolute;
+top: 10px;
+left: 60px;
+font-size: 20px;
+}
+
+.keeponyou{
+position: absolute;
+top: 12px;
+left: 150px;
+}
+
+.historyicon{
+position: absolute;
+top: 10%;
+left: 127%;
+border: none;
+display: none;
+justify-content: center;
+align-items: center;
+margin-right: 10px;
+padding: 5px;
+}
+
+.input-main{
+cursor: text;
+font-weight: 600;
+color: black;
+font-size: 50px;
+margin-right: 10px;
+padding: 1px;
+float: right;
+background-color: hsl(0deg 0% 90%);
+bottom: 70px;
+}
+
+.bottom{
+grid-area: bottom;
+font-size: small;
+display: flex;
+}
+
+.bottom div{
+text-align: left;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 85px;
+font-weight: bold;
+}
+
+.mhover:hover{
+background-color: hsl(0deg 0% 81%);
+}
+
+.bottom .mc , .mr{
+color: hsl(0deg 0% 78%);
+}
+
+.bottom .m{
+display: none;
+font-size: inherit;
+border: none;
+background-color: hsl(0deg 0% 90%);
+color: hsl(0deg 0% 78%);
+}
+
+.ul {
+display: flex;
+flex-direction: bottom;
+}
+
+.numbers{
+height: 100%;
+display: grid;
+grid-area: numbers;
+grid-template-columns:repeat(4,2fr);
+grid-template-rows: repeat(6,minmax(40px,1fr));
+grid-template-areas: 
+" percent radical power reverse"
+" CE C delete division "
+" seven eight nine multiplication"
+" four five six subtraction"
+" one two three addition"
+"plus_minus zero dot equal" ;
+background-color: #e4e4e4;
+gap: 3px;
+overflow: hidden;
+}
+
+.percent {
+grid-area: percent;
+background-color: hsl(0deg 0% 94%);
+}
+
+.CE {
+grid-area: CE;
+background-color: hsl(0deg 0% 94%);
+}
+
+.C {
+grid-area: C;
+background-color: hsl(0deg 0% 94%);
+}
+
+.delete {
+grid-area: delete;
+background-color: hsl(0deg 0% 94%);
+}
+
+.division {
+grid-area: division;
+background-color: hsl(0deg 0% 94%);
+font-size: 30px;
+}
+
+.radical {
+grid-area: radical;
+background-color: hsl(0deg 0% 94%);
+}
+
+.seven {
+grid-area: seven;
+background-color:  hsl(0deg 0% 98%);
+font-size: 25px;
+font-weight: bold;
+}
+
+.eight {
+grid-area: eight;
+background-color:  hsl(0deg 0% 98%);
+font-size: 25px;
+font-weight: bold;
+}
+
+.nine {
+grid-area: nine;
+background-color:  hsl(0deg 0% 98%);
+font-size: 25px;
+font-weight: bold;
+}
+
+.multiplication {
+grid-area: multiplication;
+background-color: hsl(0deg 0% 94%);
+}
+
+
+.power {
+grid-area: power;
+background-color: hsl(0deg 0% 94%);
+}
+
+.four {
+grid-area: four;
+background-color:  hsl(0deg 0% 98%);
+font-size: 25px;
+font-weight: bold;
+}
+
+.five {
+grid-area: five;
+background-color:  hsl(0deg 0% 98%);
+font-size: 25px;
+font-weight: bold;
+}
+
+.six {
+grid-area: six;
+background-color:  hsl(0deg 0% 98%);
+font-size: 25px;
+font-weight: bold;
+}
+
+.subtraction {
+grid-area: subtraction;
+background-color: hsl(0deg 0% 94%);
+}
+
+.one {
+grid-area: one;
+background-color:  hsl(0deg 0% 98%);
+font-size: 25px;
+font-weight: bold;
+}
+
+.two {
+grid-area: two;
+background-color:  hsl(0deg 0% 98%);
+font-size: 25px;
+font-weight: bold;
+}
+
+.three {
+grid-area: three;
+background-color:  hsl(0deg 0% 98%);
+font-size: 25px;
+font-weight: bold;
+}
+
+.addition {
+grid-area: addition;
+background-color: hsl(0deg 0% 94%);
+}
+
+.reverse {
+grid-area: reverse;
+background-color: hsl(0deg 0% 94%);
+}
+
+.plus_minus {
+grid-area: plus_minus;
+font-size: 25px;
+background-color: hsl(0deg 0% 94%);
+}
+
+.zero {
+grid-area: zero;
+background-color:  hsl(0deg 0% 98%);
+font-size: 25px;
+font-weight: bold;
+}
+
+.dot {
+font-size: 30px;
+grid-area: dot;
+background-color: hsl(0deg 0% 94%);
+font-weight: bold;
+}
+
+.equal {
+font-size: 25px;
+grid-area: equal;
+background-color: hsl(0deg 0% 94%);
+} 
+
+.equal:hover{
+background-color:#299fcc;
+}
+
+.power3 div{
+display: none;
+}
+
+.history {
+display:inline; 
+padding: 5px;
+grid-area: history;
+margin: 1px;
+background-color: hsl(0deg 0% 90%);
+font-size: 15px;
+font-weight: bold;
+}
+
+.history-icon {
+display: none;
+font-weight: bold;
+padding-right: 18px;
+margin-right: 20px;
+font-size: 15px;
+align-items: center;
+display: flex;
+}
+
+.icon2 {
+margin: 5px;
+padding-bottom: 3px;
+border-bottom: 4px solid hsl(25deg 63% 58%);
+}
+
+.icon3 {
+margin: 15px;
+padding-bottom: 4px;
+}
+
+.text_history{
+align-items: center;
+justify-content: center;
+padding-top: 15px;
+}
+
+.numbers div {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.numbers div:hover {
+background-color: hsl(0deg 0% 90%);
+}
+
+.numbers .color_white {
+background-color: white;
+font-weight: 600;
+font-size: 25px;
+}
+
+.numbers .color_gray {
+background-color: #f3f3f3;
+}
+
+@media screen and (max-width:550px){
+.power3 div{
+display: none;
+}
+.radical img{
+
+  width: 60px;
+}
+
+.container{
+grid-template-columns: 100%;
+grid-template-areas: 
+"head  "
+"main-container "
+"bottom  "
+"numbers";
+}
+
+.history{
+display: none;
+}
+
+.historyicon{
+display: block;
+}
+
+.bottom .m{
+display: block;
+}
+}
+
 @media screen and (min-width: 551px) and (max-width: 740px){
-  .power3 div{
-    display: none;
-  }
-  .container{
-    grid-template-columns: 65vw 30vw;
-  }
-  .history-icon{
-    font-weight: bold;
-    padding-right: 10px;
-    margin-right: 20px;
-    font-size: 19px;
-  }
-  .text_history{
-    margin: 20px 0 0 10px;
-    font-size: 19px;
-  }
-  
+.power3 div{
+display: none;
+}
+
+.container{
+grid-template-columns: 65vw 35vw;
+}
+
+.history-icon{
+font-weight: bold;
+padding-right: 10px;
+margin-right: 20px;
+font-size: 15px;
+}
+
+.text_history{
+font-size: 15px;
+}
 
 }
 @media screen and (min-width: 741px) and (max-width: 1024px){
-  .power3 div{
-    display: none;
-  }
-  .container{
-    grid-template-columns: 65vw 35vw;
-  }
-
-
+.power3 div{
+display: none;
 }
+
+.container{
+grid-template-columns: 65vw 35vw;
+}
+
+} 
 @media screen and (min-width:1025px){
-  .numbers{
-    grid-template-columns: repeat(5, 1fr);
-          grid-template-rows: repeat(5, 1fr);
-          grid-template-areas:
-            "percent CE C delete division"
-            "radical seven eight nine multiplication"
-            "power four five six subtraction"
-            "power3 one two three addition"
-            "reverse plus_minus zero dot equal";
-  }
-  .power3 {
-    display: block;
-  }
-  
+.numbers{
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-template-areas:
+"percent CE C delete division"
+"radical seven eight nine multiplication"
+"power four five six subtraction"
+"power3 one two three addition"
+"reverse plus_minus zero dot equal";
 }
-           
-      
-      
+
+.power3 {
+display: block;
+}
+}
+
+@media screen and (max-height:620px){
+.numbers{
+grid-template-columns: repeat( 4, 1fr);
+grid-template-rows: repeat( 6, 1fr);
+grid-template-areas:
+"percent radical power reverse "
+"CE C delete division"
+"seven eight nine multiplication"
+"four five six subtraction"
+"one two three addition"
+"plus_minus zero dot equal"
+;
+}
+.power3 div{
+  display: none;
+  }
+}
+
+
